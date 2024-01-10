@@ -44,6 +44,7 @@ const Home = () => {
 
   return (
     <div className="bg-[#0D0D0D] min-h-[100vh] scroll-smooth relative">
+      <div className="sticky top-0 z-[100]">
       <div className="text-end z-[100] pt-8 mr-8 absolute top-1 right-1">
         <Dropdown
           placement="bottomLeft"
@@ -70,11 +71,14 @@ const Home = () => {
             </div>
           )}
         >
-          <div className="flex justify-center items-center text-[#fff] custom-fonts text-[14px] cursor-pointer">
-            <p>Introduction</p>
-            <div><i className="bi bi-caret-down-fill p-2"></i></div>
-          </div>
+            <div className="flex justify-center items-center text-[#fff] custom-fonts text-[14px] cursor-pointer">
+              <p>Introduction</p>
+              <div>
+                <i className="bi bi-caret-down-fill p-2"></i>
+              </div>
+            </div>
         </Dropdown>
+      </div>
       </div>
       <div className="flex flex-col items-center justify-center overflow-hidden w-[100%] top-0 left-0">
         <div className="text-center custom-tracking text-[200px] text-[#fff] opacity-[10%] leading-[240px] font-normal mt-[-5%]">
