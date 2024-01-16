@@ -3,15 +3,18 @@ import { MenuProps } from "antd";
 import { Button, Dropdown } from "antd";
 import { useNavigate } from "react-router-dom";
 import banner from "../../assets/images/image/banner.png";
-import project1 from "../../assets/images/image/project1.png";
-import project2 from "../../assets/images/image/project2.png";
-import project3 from "../../assets/images/image/project3.png";
-import gmail from "../../assets/images/icons/Icons Here.png";
-import linkdein from "../../assets/images/icons/linkedin (1).png";
+import project1 from "../../assets/images/image/HandsOn.png";
+import project2 from "../../assets/images/image/Autumn.png";
+import project3 from "../../assets/images/image/stan.png";
+import voulenteer from "../../assets/images/image/voulenter.png";
+import github from "../../assets/images/image/git.png";
+import insta from "../../assets/images/image/insta.png";
+import linkdein from "../../assets/images/image/linkedin.png";
 import { ROUTES } from "../../routes/RouterConfig";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Home = () => {
+  const currentYear = new Date().getFullYear();
   const navigate = useNavigate();
   const aboutSectionRef = useRef(null);
   const journeySectionRef = useRef(null);
@@ -45,40 +48,40 @@ const Home = () => {
   return (
     <div className="bg-[#0D0D0D] min-h-[100vh] scroll-smooth relative">
       <div className="sticky top-0 z-[100]">
-      <div className="text-end z-[100] pt-8 mr-8 absolute top-1 right-1">
-        <Dropdown
-          placement="bottomLeft"
-          dropdownRender={() => (
-            <div className="bg-[#0D0D0D] text-white flex flex-col items-start">
-              <button
-                onClick={handleAboutClick}
-                className="py-[2px] custom-fonts"
-              >
-                About
-              </button>
-              <button
-                onClick={handleJourneyClick}
-                className="py-[2px] custom-fonts"
-              >
-                Journey
-              </button>
-              <button
-                onClick={handleProjectsClick}
-                className="py-[2px] custom-fonts"
-              >
-                Projects
-              </button>
-            </div>
-          )}
-        >
+        <div className="text-end z-[100] pt-8 mr-8 absolute top-1 right-1">
+          {/* <Dropdown
+            placement="bottomLeft"
+            dropdownRender={() => (
+              <div className="bg-[#0D0D0D] text-white flex flex-col items-start">
+                <button
+                  onClick={handleAboutClick}
+                  className="py-[2px] custom-fonts"
+                >
+                  About
+                </button>
+                <button
+                  onClick={handleJourneyClick}
+                  className="py-[2px] custom-fonts"
+                >
+                  Journey
+                </button>
+                <button
+                  onClick={handleProjectsClick}
+                  className="py-[2px] custom-fonts"
+                >
+                  Projects
+                </button>
+              </div>
+            )}
+          >
             <div className="flex justify-center items-center text-[#fff] custom-fonts text-[14px] cursor-pointer">
               <p>Introduction</p>
               <div>
                 <i className="bi bi-caret-down-fill p-2"></i>
               </div>
             </div>
-        </Dropdown>
-      </div>
+          </Dropdown> */}
+        </div>
       </div>
       <div className="flex flex-col items-center justify-center overflow-hidden w-[100%] top-0 left-0">
         <div className="text-center custom-tracking text-[200px] text-[#fff] opacity-[10%] leading-[240px] font-normal mt-[-5%]">
@@ -100,135 +103,241 @@ const Home = () => {
       <div
         id="aboutSection"
         ref={aboutSectionRef}
-        className="flex flex-col justify-center items-center mx-[420px] py-[400px] font-normal"
+        className="font-normal py-[320px]"
       >
-        <div className="text-[#fff] text-[128px] custom-spacing leading-[153.6px]">
-          I’m samarth
+        <div className="mx-[64px]">
+          <h3 className="text-[#fff] text-[24px] custom-spacing-title">
+            About me
+          </h3>
+          <div class="border-t-4  border-[#FF4C00] w-[20px] p-2"></div>
         </div>
-        <div className="custom-fonts text-[#fff] leading-[19.36px]">
-          lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
-        </div>
-        <div className="mt-2 custom-fonts text-[#fff] leading-[19.36px]">
-          orem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s.orem Ipsum is simply dummy text of the printing and
-          typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the 1500s.
-        </div>
-      </div>
-      <div id="journeySection" ref={journeySectionRef} className="py-[400px]">
-        <div className="flex text-[#fff] items-center justify-center gap-[260px] custom-fonts">
-          <div className="text-center">
-            <div className="text-[16px] font-semibold">Packet Fanatic</div>
-            <div className="text-[14px] font-normal leading-normal">
-              Jan 2021 - Jun 2021
+        <div className="flex flex-col justify-center items-center mt-[150px] mx-[365px]">
+          <div className="text-[#fff] text-[128px] custom-spacing-top leading-[153.6px]">
+            I’m samarth
+          </div>
+          <div className="custom-fonts text-[#fff] leading-[19.36px] text-[16px] ">
+            lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged.
+          </div>
+          <div className="mt-2 custom-fonts text-[#fff] leading-[19.36px]">
+            orem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.orem Ipsum is simply dummy text of the printing
+            and typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s.
+          </div>
+          <div className="flex gap-4 mt-[20px]">
+            <div className="bg-[#111111] p-[15px] rounded-[4px]">
+              <img src={github} alt="" />
             </div>
-          </div>
-          <div className="text-center">
-            <div className="text-[16px] font-semibold">Samsung R&D</div>
-            <div className="text-[14px] font-normal leading-normal">
-              June 2021 - June 2022
+            <div className="bg-[#111111] p-[15px] rounded-[4px]">
+              <img src={insta} alt="" />
             </div>
-          </div>
-          <div className="text-center">
-            <div className="text-[16px] font-semibold">Zluri</div>
-            <div className="text-[14px] font-normal leading-normal">
-              Jul 2021 - Present
+            <div className="bg-[#111111] p-[15px] rounded-[4px]">
+              <img src={linkdein} alt="" />
             </div>
-          </div>
-          <div className="text-center">
-            <div className="text-[16px] font-semibold">Codeclock</div>
-            <div className="text-[14px] font-normal leading-normal">
-              Aug 2023 - Present
-            </div>
-          </div>
-        </div>
-        <div className="flex items-center justify-center mt-2">
-          <div className="w-2 h-2 bg-white rounded-full"></div>
-          <div className="h-px bg-white w-[380px]"></div>
-          <div className="w-2 h-2 bg-white rounded-full"></div>
-          <div className="h-px bg-white w-[380px]"></div>
-          <div className="w-2 h-2 bg-white rounded-full"></div>
-          <div className="h-px bg-white w-[380px]"></div>
-          <div className="w-2 h-2 bg-white rounded-full"></div>
-        </div>
-      </div>
-      <div
-        id="projectsSection"
-        ref={projectsSectionRef}
-        className="flex items-center justify-center cursor-pointer"
-      >
-        <div className="relative group">
-          <img
-            src={project1}
-            alt="Project 1"
-            className="w-[620px] h-[975px] grayscale transition duration-300 ease-in-out group-hover:grayscale-0"
-          />
-          <div className="text-[120px] font-normal custom-spacing absolute inset-0 bg-black opacity-50 text-[#fff] flex items-center justify-center">
-            Autumn
-          </div>
-        </div>
-        <div className="relative group">
-          <img
-            src={project2}
-            alt="Project 2"
-            className="w-[620px] h-[975px] grayscale transition duration-300 ease-in-out group-hover:grayscale-0"
-          />
-          <div className="text-[120px] font-normal custom-spacing absolute inset-0 bg-black opacity-50 text-[#fff] flex items-center justify-center">
-            HandsOn
-          </div>
-        </div>
-        <div className="relative group">
-          <img
-            src={project1}
-            alt="Project 2"
-            className="w-[620px] h-[975px] grayscale transition duration-300 ease-in-out group-hover:grayscale-0"
-          />
-          <div className="text-[120px] font-normal custom-spacing absolute inset-0 bg-black opacity-50 text-[#fff] flex items-center justify-center">
-            Autumn
           </div>
         </div>
       </div>
-      <div>
-        <div className="py-[90px] flex justify-between mx-[68px] items-center">
-          <div className="text-[#fff]">
-            <h3 className="text-[32px] custom-spacing-footer2">
-              Samarth Manwani
-            </h3>
-            <p className="custom-fonts text-[13px] opacity-[50%] custom-spacing-footer">
-              "Curiosity and consistency will always beat talent."
-            </p>
-          </div>
-          <div>
-            <div className="text-[#fff] pb-2 custom-fonts opacity-[50%] custom-spacing-footer">
-              Let's Connect
+
+      <div className="py-[320px]" id="journeySection" ref={journeySectionRef}>
+        <div className="mx-[64px]">
+          <h3 className="text-[#fff] text-[24px] custom-spacing-title">
+            MY EXPERIENCE
+          </h3>
+          <div class="border-t-4 border-[#FF4C00] w-[20px] p-2"></div>
+        </div>
+        <div className="mt-[280px]">
+          <div className="flex text-[#fff] items-center justify-center gap-[260px] custom-fonts">
+            <div className="text-center">
+              <div className="text-[16px] font-semibold">Packet Fanatic</div>
+              <div className="text-[14px] font-normal leading-normal">
+                Jan 2021 - Jun 2021
+              </div>
             </div>
-            <div className="flex gap-4 cursor-pointer">
-              <div className="w-[30px] h-[30px] flex items-center justify-center bg-[#fff] bg-opacity-[10%] rounded-full">
-                <i className="text-[#fff] bi bi-google"></i>
+            <div className="text-center">
+              <div className="text-[16px] font-semibold">Samsung R&D</div>
+              <div className="text-[14px] font-normal leading-normal">
+                June 2021 - June 2022
               </div>
-              <div className="w-[30px] h-[30px] flex items-center justify-center bg-[#fff] bg-opacity-[10%] rounded-full">
-                <i className="text-[#fff] bi bi-whatsapp"></i>
+            </div>
+            <div className="text-center">
+              <div className="text-[16px] font-semibold">Zluri</div>
+              <div className="text-[14px] font-normal leading-normal">
+                Jul 2021 - Present
               </div>
-              <div className="w-[30px] h-[30px] flex items-center justify-center bg-[#fff] bg-opacity-[10%] rounded-full">
-                <i class="text-[#fff] bi bi-linkedin"></i>
+            </div>
+            <div className="text-center">
+              <div className="text-[16px] font-semibold">Codeclock</div>
+              <div className="text-[14px] font-normal leading-normal">
+                Aug 2023 - Present
               </div>
-              <div className="w-[30px] h-[30px] flex items-center justify-center bg-[#fff] bg-opacity-[10%] rounded-full">
-                <i class="text-[#fff] bi bi-github"></i>
+            </div>
+          </div>
+          <div className="flex items-center justify-center mt-2">
+            <div className="w-2 h-2 bg-white rounded-full"></div>
+            <div className="h-px bg-white w-[380px]"></div>
+            <div className="w-2 h-2 bg-white rounded-full"></div>
+            <div className="h-px bg-white w-[380px]"></div>
+            <div className="w-2 h-2 bg-white rounded-full"></div>
+            <div className="h-px bg-white w-[380px]"></div>
+            <div className="w-2 h-2 bg-white rounded-full"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Project Section Start */}
+
+      <div className="py-[320px]" id="projectsSection" ref={projectsSectionRef}>
+        <div className="mx-[64px]">
+          <h3 className="text-[#fff] text-[24px] custom-spacing-title">
+            MY PROJECTS
+          </h3>
+          <div class="border-t-4 border-[#FF4C00] w-[20px] p-2"></div>
+        </div>
+        <div className="mt-[150px]">
+          <div className="grid grid-cols-5 gap-[24px]">
+            <div className="col-span-1"></div>
+            <div className="col-span-1">
+              <div className="flex bg-[#F2C347] rounded-[8px] items-center justify-center h-[190px]">
+                <div>
+                  <img src={project1} alt="" />
+                </div>
+              </div>
+              <div className="mx-2">
+                <div className="flex justify-between mt-2">
+                  <h3 className="text-[#FFF] custom-fonts text-[20px]">
+                    Handson
+                  </h3>
+                  <i className="text-[#FFF] bi bi-box-arrow-up-right"></i>
+                </div>
+                <div className="text-[#fff] text-[14px] custom-fonts">
+                  Experienced with various B2B products, Shopify, WP with
+                  awesome solutions for business clients.
+                </div>
+                <div className="flex gap-2 mt-2">
+                  <div className="text-[#ffff] custom-fonts text-[14px] whitespace-nowrap">
+                    Flutter | Node.js | Firebase
+                  </div>
+                  <div class="border-t-4 border-[#F2C347] w-full p-2 mt-2"></div>
+                </div>
+              </div>
+            </div>
+            <div className="col-span-1">
+              <div className="flex bg-[#F25C54] rounded-[8px] items-center justify-center h-[190px]">
+                <div>
+                  <img src={project2} alt="" />
+                </div>
+              </div>
+              <div className="mx-2">
+                <div className="flex justify-between mt-2">
+                  <h3 className="text-[#FFF] custom-fonts text-[20px]">
+                    Autumn
+                  </h3>
+                  <i className="text-[#FFF] bi bi-box-arrow-up-right"></i>
+                </div>
+                <div className="text-[#fff] text-[14px] custom-fonts">
+                  Experienced with various B2B products, Shopify, WP with
+                  awesome solutions for business clients.
+                </div>
+                <div className="flex gap-2 mt-2">
+                  <div className="text-[#ffff] custom-fonts text-[14px] whitespace-nowrap">
+                    Flutter | Node.js | Firebase
+                  </div>
+                  <div class="border-t-4 border-[#F2C347] w-full p-2 mt-2"></div>
+                </div>
+              </div>
+            </div>
+            <div className="col-span-1">
+              <div className="flex bg-[#6355FF] rounded-[8px] items-center justify-center h-[190px]">
+                <div>
+                  <img src={project3} alt="" />
+                </div>
+              </div>
+              <div className="mx-2">
+                <div className="flex justify-between mt-2">
+                  <h3 className="text-[#FFF] custom-fonts text-[20px]">
+                    Stan
+                  </h3>
+                  <i className="text-[#FFF] bi bi-box-arrow-up-right"></i>
+                </div>
+                <div className="text-[#fff] text-[14px] custom-fonts">
+                  Experienced with various B2B products, Shopify, WP with
+                  awesome solutions for business clients.
+                </div>
+                <div className="flex gap-2 mt-2">
+                  <div className="text-[#ffff] custom-fonts text-[14px] whitespace-nowrap">
+                    Flutter | Node.js | Firebase
+                  </div>
+                  <div class="border-t-4 border-[#F2C347] w-full p-2 mt-2"></div>
+                </div>
+              </div>
+            </div>
+            <div className="col-span-1"></div>
+          </div>
+        </div>
+      </div>
+      {/* Project Section End */}
+
+      {/* Voulenteer Section Start */}
+      <div className="py-[320px]" id="voulenteerSection">
+        <div className="mx-[64px]">
+          <h3 className="text-[#fff] text-[24px] custom-spacing-title">
+            volunteering
+          </h3>
+          <div class="border-t-4 border-[#FF4C00] w-[20px] p-2"></div>
+        </div>
+        <div className="mt-[150px]">
+          <div className="grid grid-cols-2 justify-center items-center gap-[24px] mx-[180px]">
+            <div className="col-span-1 rounded-[8px] text-[#fff] bg-[green] relative">
+              <img src={voulenteer} alt="" />
+              <div className="absolute top-4 left-6 custom-fonts">
+                <h3 className="text-[18px] font-bold">
+                  GDSC / HUBLI, KARNATAKA
+                </h3>
+                <p className="text-[16px]">2023, JUN - 2024, AUG</p>
+              </div>
+            </div>
+            <div className="col-span-1 rounded-[8px] text-[#fff] bg-[green] relative">
+              <img src={voulenteer} alt="" />
+              <div className="absolute top-4 left-6 custom-fonts">
+                <h3 className="text-[18px] font-bold">
+                  GDSC / HUBLI, KARNATAKA
+                </h3>
+                <p className="text-[16px]">2023, JUN - 2024, AUG</p>
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 justify-center items-center gap-[24px] mx-[180px] mt-[24px]">
+            <div className="col-span-1 rounded-[8px] text-[#fff] bg-[green] relative">
+              <img src={voulenteer} alt="" />
+              <div className="absolute top-4 left-6 custom-fonts">
+                <h3 className="text-[18px] font-bold">
+                  GDSC / HUBLI, KARNATAKA
+                </h3>
+                <p className="text-[16px]">2023, JUN - 2024, AUG</p>
+              </div>
+            </div>
+            <div className="col-span-1 rounded-[8px] text-[#fff] bg-[green] relative">
+              <img src={voulenteer} alt="" />
+              <div className="absolute top-4 left-6 custom-fonts">
+                <h3 className="text-[18px] font-bold">
+                  GDSC / HUBLI, KARNATAKA
+                </h3>
+                <p className="text-[16px]">2023, JUN - 2024, AUG</p>
               </div>
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-start pb-[34px] mx-[66px] gap-4">
-          <div className="h-px bg-white w-full bg-opacity-[10%]"></div>
-          <p className="custom-fonts text-[13px] opacity-[50%] text-[#fff] custom-spacing-footer">
-            All right reversed, 2024
-          </p>
+      </div>
+      <div className="bg-[#292929] py-2">
+        <div className="flex justify-between mx-[28px] text-[#fff] text-[18px]">
+          <h3>© {currentYear} All rights reserved </h3>
+          <h3>designed by naman anand</h3>
         </div>
       </div>
     </div>
