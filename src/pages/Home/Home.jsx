@@ -144,14 +144,14 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[320px]" id="journeySection" ref={journeySectionRef}>
+      <div id="journeySection" ref={journeySectionRef}>
         <div className="mx-[64px]">
           <h3 className="text-[#fff] text-[24px] custom-spacing-title">
             MY EXPERIENCE
           </h3>
           <div class="border-t-4 border-[#FF4C00] w-[20px] p-2"></div>
         </div>
-        <div className="mt-[280px]">
+        <div className="py-[320px]">
           <div className="flex text-[#fff] items-center justify-center gap-[260px] custom-fonts">
             <div className="text-center">
               <div className="text-[16px] font-semibold">Packet Fanatic</div>
