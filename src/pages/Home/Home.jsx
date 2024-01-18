@@ -6,7 +6,7 @@ import banner from "../../assets/images/image/banner.png";
 import project1 from "../../assets/images/image/HandsOn.png";
 import project2 from "../../assets/images/image/Autumn.png";
 import project3 from "../../assets/images/image/stan.png";
-import voulenteer from "../../assets/images/image/voulenter.png";
+import voulenteer from "../../assets/images/image/voulenteer.jpeg";
 import github from "../../assets/images/image/git.png";
 import insta from "../../assets/images/image/insta.png";
 import linkdein from "../../assets/images/image/linkedin.png";
@@ -44,6 +44,36 @@ const Home = () => {
       block: "center",
     });
   };
+
+  const projects = [
+    {
+      name: "Handson",
+      color: "#F2C347",
+      image: project1,
+      description:
+        "Experienced with various B2B products, Shopify, WP with awesome solutions for business clients.",
+      technologies: "Flutter | Node.js | Firebase",
+      border: "#F2C347",
+    },
+    {
+      name: "Autumn",
+      color: "#F25C54",
+      image: project2,
+      description:
+        "Experienced with various B2B products, Shopify, WP with awesome solutions for business clients.",
+      technologies: "Flutter | Node.js | Firebase",
+      border: "#F25C54",
+    },
+    {
+      name: "Stan",
+      color: "#6355FF",
+      image: project3,
+      description:
+        "Experienced with various B2B products, Shopify, WP with awesome solutions for business clients.",
+      technologies: "Flutter | Node.js | Firebase",
+      border: "#6355FF",
+    },
+  ];
 
   return (
     <div className="bg-[#0D0D0D] min-h-[100vh] scroll-smooth relative">
@@ -115,7 +145,7 @@ const Home = () => {
           <div className="text-[#fff] text-[128px] custom-spacing-top leading-[153.6px]">
             I’m samarth
           </div>
-          <div className="custom-fonts text-[#fff] leading-[19.36px] text-[16px] ">
+          <div className="custom-fonts text-[#fff] leading-[19.36px] text-[16px] text-justify">
             lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -123,7 +153,7 @@ const Home = () => {
             only five centuries, but also the leap into electronic typesetting,
             remaining essentially unchanged.
           </div>
-          <div className="mt-2 custom-fonts text-[#fff] leading-[19.36px]">
+          <div className="mt-2 custom-fonts text-[#fff] leading-[19.36px] text-justify">
             orem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s.orem Ipsum is simply dummy text of the printing
@@ -202,81 +232,38 @@ const Home = () => {
         <div className="mt-[150px]">
           <div className="grid grid-cols-5 gap-[24px]">
             <div className="col-span-1"></div>
-            <div className="col-span-1">
-              <div className="flex bg-[#F2C347] rounded-[8px] items-center justify-center h-[190px]">
-                <div>
-                  <img src={project1} alt="" />
-                </div>
-              </div>
-              <div className="mx-2">
-                <div className="flex justify-between mt-2">
-                  <h3 className="text-[#FFF] custom-fonts text-[20px]">
-                    Handson
-                  </h3>
-                  <i className="text-[#FFF] bi bi-box-arrow-up-right"></i>
-                </div>
-                <div className="text-[#fff] text-[14px] custom-fonts">
-                  Experienced with various B2B products, Shopify, WP with
-                  awesome solutions for business clients.
-                </div>
-                <div className="flex gap-2 mt-2">
-                  <div className="text-[#ffff] custom-fonts text-[14px] whitespace-nowrap">
-                    Flutter | Node.js | Firebase
+            {projects.map((project, index) => (
+              <div key={index} className="col-span-1">
+                <div
+                  style={{ backgroundColor: project.color }}
+                  className="flex rounded-[8px] items-center justify-center h-[190px]"
+                >
+                  <div>
+                    <img src={project.image} alt="" />
                   </div>
-                  <div class="border-t-4 border-[#F2C347] w-full p-2 mt-2"></div>
                 </div>
-              </div>
-            </div>
-            <div className="col-span-1">
-              <div className="flex bg-[#F25C54] rounded-[8px] items-center justify-center h-[190px]">
-                <div>
-                  <img src={project2} alt="" />
-                </div>
-              </div>
-              <div className="mx-2">
-                <div className="flex justify-between mt-2">
-                  <h3 className="text-[#FFF] custom-fonts text-[20px]">
-                    Autumn
-                  </h3>
-                  <i className="text-[#FFF] bi bi-box-arrow-up-right"></i>
-                </div>
-                <div className="text-[#fff] text-[14px] custom-fonts">
-                  Experienced with various B2B products, Shopify, WP with
-                  awesome solutions for business clients.
-                </div>
-                <div className="flex gap-2 mt-2">
-                  <div className="text-[#ffff] custom-fonts text-[14px] whitespace-nowrap">
-                    Flutter | Node.js | Firebase
+                <div className="mx-2">
+                  <div className="flex justify-between mt-2">
+                    <h3 className="text-[#FFF] custom-fonts text-[20px]">
+                      {project.name}
+                    </h3>
+                    <i className="text-[#FFF] bi bi-box-arrow-up-right"></i>
                   </div>
-                  <div class="border-t-4 border-[#F2C347] w-full p-2 mt-2"></div>
-                </div>
-              </div>
-            </div>
-            <div className="col-span-1">
-              <div className="flex bg-[#6355FF] rounded-[8px] items-center justify-center h-[190px]">
-                <div>
-                  <img src={project3} alt="" />
-                </div>
-              </div>
-              <div className="mx-2">
-                <div className="flex justify-between mt-2">
-                  <h3 className="text-[#FFF] custom-fonts text-[20px]">
-                    Stan
-                  </h3>
-                  <i className="text-[#FFF] bi bi-box-arrow-up-right"></i>
-                </div>
-                <div className="text-[#fff] text-[14px] custom-fonts">
-                  Experienced with various B2B products, Shopify, WP with
-                  awesome solutions for business clients.
-                </div>
-                <div className="flex gap-2 mt-2">
-                  <div className="text-[#ffff] custom-fonts text-[14px] whitespace-nowrap">
-                    Flutter | Node.js | Firebase
+                  <div className="text-[#fff] text-[14px] custom-fonts">
+                    {project.description}
                   </div>
-                  <div class="border-t-4 border-[#F2C347] w-full p-2 mt-2"></div>
+                  <div className="flex gap-2 mt-2">
+                    <div className="text-[#ffff] custom-fonts text-[14px] whitespace-nowrap">
+                      {project.technologies}
+                    </div>
+                    <div
+                      style={{ borderColor: project.border }}
+                      className="border-t-4 w-full p-2 mt-2"
+                    ></div>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
             <div className="col-span-1"></div>
           </div>
         </div>
@@ -293,42 +280,83 @@ const Home = () => {
         </div>
         <div className="mt-[150px]">
           <div className="grid grid-cols-2 justify-center items-center gap-[24px] mx-[180px]">
-            <div className="col-span-1 rounded-[8px] text-[#fff] bg-[green] relative">
-              <img src={voulenteer} alt="" />
-              <div className="absolute top-4 left-6 custom-fonts">
+            <div className="group cursor-pointer col-span-1 rounded-[8px] text-[#fff] relative flex flex-col justify-center items-center text-center">
+              <img
+                className="rounded-[8px] grayscale transition-transform transform group-hover:blur-[2px] group-hover:grayscale-0"
+                src={voulenteer}
+                alt=""
+              />
+              <div className="absolute top-4 left-6 custom-fonts text-start">
                 <h3 className="text-[18px] font-bold">
                   GDSC / HUBLI, KARNATAKA
                 </h3>
                 <p className="text-[16px]">2023, JUN - 2024, AUG</p>
               </div>
+              <div className="absolute top-[130px]  bottom-0 flex justify-center items-center mx-[42px] custom-fonts text-[15px] opacity-0 group-hover:opacity-100">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                qui excepturi cupiditate eos veritatis, magni maxime fugit
+                facilis est in possimus velit iste temporibus praesentium
+                accusantium quos dolores delectus animi.
+              </div>
             </div>
-            <div className="col-span-1 rounded-[8px] text-[#fff] bg-[green] relative">
-              <img src={voulenteer} alt="" />
-              <div className="absolute top-4 left-6 custom-fonts">
+
+            <div className="group cursor-pointer col-span-1 rounded-[8px] text-[#fff] relative flex flex-col justify-center items-center text-center">
+              <img
+                className="rounded-[8px] grayscale transition-transform transform group-hover:blur-[2px] group-hover:grayscale-0"
+                src={voulenteer}
+                alt=""
+              />
+              <div className="absolute top-4 left-6 custom-fonts text-start">
                 <h3 className="text-[18px] font-bold">
                   GDSC / HUBLI, KARNATAKA
                 </h3>
                 <p className="text-[16px]">2023, JUN - 2024, AUG</p>
+              </div>
+              <div className="absolute top-[130px]  bottom-0 flex justify-center items-center mx-[42px] custom-fonts text-[15px] opacity-0 group-hover:opacity-100">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                qui excepturi cupiditate eos veritatis, magni maxime fugit
+                facilis est in possimus velit iste temporibus praesentium
+                accusantium quos dolores delectus animi.
               </div>
             </div>
           </div>
           <div className="grid grid-cols-2 justify-center items-center gap-[24px] mx-[180px] mt-[24px]">
-            <div className="col-span-1 rounded-[8px] text-[#fff] bg-[green] relative">
-              <img src={voulenteer} alt="" />
-              <div className="absolute top-4 left-6 custom-fonts">
+            <div className="group cursor-pointer col-span-1 rounded-[8px] text-[#fff] relative flex flex-col justify-center items-center text-center">
+              <img
+                className="rounded-[8px] grayscale transition-transform transform group-hover:blur-[2px] group-hover:grayscale-0"
+                src={voulenteer}
+                alt=""
+              />
+              <div className="absolute top-4 left-6 custom-fonts text-start">
                 <h3 className="text-[18px] font-bold">
                   GDSC / HUBLI, KARNATAKA
                 </h3>
                 <p className="text-[16px]">2023, JUN - 2024, AUG</p>
               </div>
+              <div className="absolute top-[130px]  bottom-0 flex justify-center items-center mx-[42px] custom-fonts text-[15px] opacity-0 group-hover:opacity-100">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                qui excepturi cupiditate eos veritatis, magni maxime fugit
+                facilis est in possimus velit iste temporibus praesentium
+                accusantium quos dolores delectus animi.
+              </div>
             </div>
-            <div className="col-span-1 rounded-[8px] text-[#fff] bg-[green] relative">
-              <img src={voulenteer} alt="" />
-              <div className="absolute top-4 left-6 custom-fonts">
+            <div className="group cursor-pointer col-span-1 rounded-[8px] text-[#fff] relative flex flex-col justify-center items-center text-center">
+              <img
+                className="rounded-[8px] grayscale transition-transform transform group-hover:blur-[2px] group-hover:grayscale-0"
+                src={voulenteer}
+                alt=""
+              />
+              <div className="absolute top-4 left-6 custom-fonts text-start">
                 <h3 className="text-[18px] font-bold">
                   GDSC / HUBLI, KARNATAKA
                 </h3>
                 <p className="text-[16px]">2023, JUN - 2024, AUG</p>
+              </div>
+              <div className="absolute top-[130px]  bottom-0 flex justify-center items-center mx-[42px] custom-fonts text-[15px] opacity-0 group-hover:opacity-100">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                qui excepturi cupiditate eos veritatis, magni maxime fugit
+                facilis est in possimus velit iste temporibus praesentium
+                accusantium quos dolores delectus animi.
               </div>
             </div>
           </div>
