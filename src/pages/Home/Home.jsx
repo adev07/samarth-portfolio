@@ -462,16 +462,11 @@ const Home = () => {
           </div>
         </div>{" "}
       </div>
-      <div className="bg-[#292929] py-[20px] mt-[30px]">
-        <div className="flex justify-between mx-[28px] text-[#fff] footer-font footer-spacing text-[18px]">
-          <div>
+      <div className="py-[20px] mt-[30px]">
+        <div className="flex gap-2 flex-col justify-center items-center mx-[28px] text-[#fff] footer-font footer-spacing text-[20px] pb-[32px]">
+        <p>Lets build something better together</p>
             <p>meet@samrth.tech</p>
-            <p>Lets build something better together</p>
-          </div>
-          <div>
           <h3>© {currentYear} All rights reserved </h3>
-            <h3>designed by naman anand</h3>
-          </div>
         </div>
       </div>
     </div>
